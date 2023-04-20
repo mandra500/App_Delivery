@@ -104,7 +104,7 @@ Widget _tarjeta(BuildContext context) {
               width: 230.0,
               height: 200.0,
               fit: BoxFit.cover,
-              image: NetworkImage(
+              image: AssetImage(
                   'https://scontent.flim35-1.fna.fbcdn.net/v/t39.30808-6/334953036_887566205847752_8817404505968263124_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEWl2KWp0AC3ASHuka0_rn6fLMe42xUZEd8sx7jbFRkRzmyxGCitqsJBORduLU1vw8&_nc_ohc=FIb_E0MtePMAX8ncHPO&_nc_ht=scontent.flim35-1.fna&oh=00_AfCS4Pt8uGaa3IVjr8LMOewUmTHOGy4TUa2RS9p25Swylg&oe=643A97C0')),
         ),
         Column(
