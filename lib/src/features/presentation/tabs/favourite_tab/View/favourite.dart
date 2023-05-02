@@ -10,9 +10,9 @@ class FavouriteTab extends StatefulWidget {
 class _FavouriteTabState extends State<FavouriteTab> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      child: const Text('Favoritos'),
+    return const Center(
+        child: SizedBox(
+      child: Text('Favoritos'),
     ));
   }
 }

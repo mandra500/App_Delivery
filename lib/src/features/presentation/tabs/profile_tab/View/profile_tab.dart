@@ -10,9 +10,9 @@ class ProfileTab extends StatefulWidget {
 class _ProfileTabState extends State<ProfileTab> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-      child: const Text('Perfil'),
+    return const Center(
+        child: SizedBox(
+      child: Text('Perfil'),
     ));
   }
 }

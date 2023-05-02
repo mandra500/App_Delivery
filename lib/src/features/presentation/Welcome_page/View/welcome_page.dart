@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/done_button.dart';
 import 'package:app_restaurant/src/features/presentation/login_page/View/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,18 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
+              doneButton( backgroundColor: Theme.of(context).colorScheme.secondary,);
+              //aqui va el botton azul de facebook
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/*
+Container(
                 width: 300,
                 height: 65,
                 padding: const EdgeInsets.only(top: 20),
@@ -73,44 +85,4 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                width: 300,
-                height: 65,
-                padding: const EdgeInsets.only(top: 20),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Icons.facebook,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        'Iniciar sesión con Facebook',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
+*/

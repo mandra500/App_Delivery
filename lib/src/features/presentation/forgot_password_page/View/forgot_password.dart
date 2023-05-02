@@ -1,7 +1,10 @@
+import 'package:app_restaurant/src/features/presentation/commons_widgets/alert_dialog.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/back_button.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
 import 'package:flutter/material.dart';
-import 'package:app_restaurant/src/features/presentation/login_page/View/login_page.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
+//import 'package:app_restaurant/src/features/presentation/login_page/View/login_page.dart';
+
+import '../../commons_widgets/done_button.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -97,70 +100,10 @@ Widget buildLoginButton(BuildContext context) {
 }
 
 void _showAlerta(BuildContext context) {
-  showDialog(
-    context: context,
-    barrierDismissible: true,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.0))),
-        content: SizedBox(
-          height: 400,
-          child: Column(
-            children: [
-              Image.asset(
-                'assets/img/lock.png',
-                width: 130,
-                height: 130,
-              ),
-              Container(
-                margin: const EdgeInsets.all(20.0),
-                child: headerText('Tu contraseña ha sido restablecida',
-                    Theme.of(context).primaryColor, FontWeight.bold, 20.0),
-              ),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                child: Text(
-                  'En breve recibirá un correo electrónico con un código para configurar una nueva contraseña',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15.0),
-                ),
-              ),
-              _doneButton(context)
-            ],
-          ),
-        ),
-      );
-    },
-  );
-}
-
-Widget _doneButton(BuildContext context) {
-  return Container(
-    width: 200,
-    height: 65,
-    padding: const EdgeInsets.only(top: 20),
-    child: ElevatedButton(
-      onPressed: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const LoginPage()));
-      },
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.secondary,
-      ),
-      child: const Text(
-        'Done',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-        ),
-      ),
-    ),
-  );
+  showAlertDialog(
+      context,
+      const AssetImage('assets/img/lock.png'),
+      "Tu contraseña ha sido restablecida",
+      "En breve recibirá un correo electrónico con un código para configurar una nueva contraseña",
+      doneButton(context, "Done"));
 }
