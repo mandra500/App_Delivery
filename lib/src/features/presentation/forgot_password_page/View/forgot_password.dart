@@ -1,10 +1,9 @@
+import 'package:app_restaurant/src/colors/colors.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/alert_dialog.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
-//import 'package:app_restaurant/src/features/presentation/login_page/View/login_page.dart';
-
-import '../../commons_widgets/done_button.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -42,7 +41,12 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ),
               buildEmailInput(),
-              buildLoginButton(context)
+              roundedButton(
+                  context: context,
+                  labelButton: 'Enviar',
+                  color: orange,
+                  funcx: () => _showAlerta(context))
+              //buildLoginButton(context)
             ],
           ),
         ),
@@ -73,31 +77,31 @@ Widget buildEmailInput() {
 }
 
 // Boton de enviar para restablecer contraseña
-Widget buildLoginButton(BuildContext context) {
-  return Container(
-    width: 200,
-    height: 65,
-    padding: const EdgeInsets.only(top: 20),
-    child: ElevatedButton(
-      onPressed: () {
-        _showAlerta(context);
-      },
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.secondary,
-      ),
-      child: const Text(
-        'Enviar',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-        ),
-      ),
-    ),
-  );
-}
+//Widget buildLoginButton(BuildContext context) {
+//  return Container(
+//    width: 200,
+//    height: 65,
+//    padding: const EdgeInsets.only(top: 20),
+//    child: ElevatedButton(
+//      onPressed: () {
+//        _showAlerta(context);
+//      },
+//      style: ElevatedButton.styleFrom(
+//        shape: RoundedRectangleBorder(
+//          borderRadius: BorderRadius.circular(20),
+//        ),
+//        backgroundColor: Theme.of(context).colorScheme.secondary,
+//      ),
+//      child: const Text(
+//        'Enviar',
+//        style: TextStyle(
+//          color: Colors.white,
+//          fontSize: 15,
+//        ),
+//      ),
+//    ),
+//  );
+//}
 
 void _showAlerta(BuildContext context) {
   showAlertDialog(
@@ -105,5 +109,11 @@ void _showAlerta(BuildContext context) {
       const AssetImage('assets/img/lock.png'),
       "Tu contraseña ha sido restablecida",
       "En breve recibirá un correo electrónico con un código para configurar una nueva contraseña",
-      doneButton(context, "Done"));
+      roundedButton(
+          context: context,
+          labelButton: 'Done',
+          color: orange,
+          funcx: () {
+            Navigator.pushNamed(context, 'login');
+          }));
 }

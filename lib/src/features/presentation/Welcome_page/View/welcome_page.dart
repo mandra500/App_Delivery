@@ -1,6 +1,6 @@
 import 'dart:ui';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/done_button.dart';
-import 'package:app_restaurant/src/features/presentation/login_page/View/login_page.dart';
+import 'package:app_restaurant/src/colors/colors.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -48,7 +48,22 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              doneButton( backgroundColor: Theme.of(context).colorScheme.secondary,);
+              roundedButton(
+                  context: context,
+                  labelButton: 'Iniciar sesión',
+                  color: orange,
+                  funcx: () {
+                    Navigator.pushNamed(context, 'login');
+                  }),
+              roundedButton(
+                context: context,
+                labelButton: 'Iniciar sesión con Facebook',
+                color: fbButtonColor,
+                isWithIcon: true,
+                icon: const AssetImage('assets/img/facebook.png'),
+                funcx: () => debugPrint("goToFacebook"),
+              ),
+
               //aqui va el botton azul de facebook
             ],
           ),
@@ -57,32 +72,3 @@ class WelcomePage extends StatelessWidget {
     );
   }
 }
-
-/*
-Container(
-                width: 300,
-                height: 65,
-                padding: const EdgeInsets.only(top: 20),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginPage()));
-                  },
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    backgroundColor: Theme.of(context).colorScheme.secondary,
-                  ),
-                  child: const Text(
-                    'Iniciar sesión',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                ),
-              ),
-*/

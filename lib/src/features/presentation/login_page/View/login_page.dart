@@ -1,4 +1,6 @@
+import 'package:app_restaurant/src/colors/colors.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/back_button.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -70,7 +72,14 @@ class LoginPage extends StatelessWidget {
                         const SizedBox(height: 30),
                         buildEmailInput(),
                         buildPasswordInput(),
-                        buildLoginButton(context),
+                        roundedButton(
+                            context: context,
+                            labelButton: 'Iniciar sesión',
+                            color: orange,
+                            funcx: () {
+                              Navigator.pushNamed(context, 'tabs');
+                            }),
+                        //buildLoginButton(context),
                         Container(
                           margin: const EdgeInsets.only(top: 30.0),
                           child: GestureDetector(
@@ -169,7 +178,9 @@ Widget buildPasswordInput() {
   );
 }
 
-Widget buildLoginButton(BuildContext context) {
+
+
+/*Widget buildLoginButton(BuildContext context) {
   return Container(
     width: 300,
     height: 65,
@@ -194,3 +205,4 @@ Widget buildLoginButton(BuildContext context) {
     ),
   );
 }
+*/
