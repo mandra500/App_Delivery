@@ -22,8 +22,10 @@ void showAlertDialog(BuildContext context, ImageProvider<Object> imagePath,
               ),
               Container(
                 margin: const EdgeInsets.all(20.0),
-                child: headerText(headerTitle, Theme.of(context).primaryColor,
-                    FontWeight.bold, 20.0),
+                child: headerText(
+                    texto: headerTitle,
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 20.0),
               ),
               Container(
                 margin: const EdgeInsets.all(10.0),

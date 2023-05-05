@@ -25,8 +25,10 @@ class ForgotPassword extends StatelessWidget {
           padding: const EdgeInsets.all(30.0),
           child: Column(
             children: [
-              headerText('Has olvidado tu contraseña',
-                  Theme.of(context).primaryColor, FontWeight.bold, 30.0),
+              headerText(
+                  texto: 'Has olvidado tu contraseña',
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 30.0),
               const SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.all(10.0),

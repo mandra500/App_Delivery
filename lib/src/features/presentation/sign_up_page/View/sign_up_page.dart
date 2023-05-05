@@ -1,5 +1,7 @@
+import 'package:app_restaurant/src/colors/colors.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/back_button.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -20,14 +22,21 @@ class SignUpPage extends StatelessWidget {
           padding: const EdgeInsets.all(30),
           child: Column(
             children: [
-              headerText('Crear una cuenta', Theme.of(context).primaryColor,
-                  FontWeight.bold, 30.0),
+              headerText(
+                  texto: 'Crear una cuenta',
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 30.0),
               _usernameInput(context),
               _emailInput(context),
               _phoneInput(context),
               _dateOfBirthInput(context),
               _passwordInput(context),
-              _signUpButton(context),
+              roundedButton(
+                  context: context,
+                  labelButton: 'Registrarse',
+                  color: orange,
+                  funcx: () {}),
+              //_signUpButton(context),
               Container(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
@@ -127,30 +136,6 @@ Widget _passwordInput(BuildContext context) {
       decoration: InputDecoration(
           hintText: 'Contraseña',
           border: OutlineInputBorder(borderSide: BorderSide.none)),
-    ),
-  );
-}
-
-Widget _signUpButton(BuildContext context) {
-  return Container(
-    width: 200,
-    height: 65,
-    padding: const EdgeInsets.only(top: 20),
-    child: ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.secondary,
-      ),
-      child: const Text(
-        'Registrarse',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-        ),
-      ),
     ),
   );
 }

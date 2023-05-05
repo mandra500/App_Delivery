@@ -1,3 +1,4 @@
+import 'package:app_restaurant/src/colors/colors.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +20,10 @@ class ExploreTab extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 20.0),
                     alignment: Alignment.centerLeft,
-                    child: headerText('Descubre nuevos sabores', Colors.black,
-                        FontWeight.bold, 25.0),
+                    child: headerText(
+                        texto: 'Descubre nuevos sabores',
+                        color: Colors.black,
+                        fontSize: 25.0),
                   ),
                   _sliderCards(),
                   _headers(context, 'Platillos top', "Mostrar todo"),
@@ -48,24 +51,28 @@ class ExploreTab extends StatelessWidget {
 Widget _topBar(BuildContext context) {
   return Row(
     children: [
-      Container(
-        width: 270,
-        padding: const EdgeInsets.all(10.0),
-        margin: const EdgeInsets.only(left: 16.0),
-        decoration: BoxDecoration(
-            border: Border.all(color: const Color.fromRGBO(234, 236, 239, 1.0)),
-            borderRadius: BorderRadius.circular(20.0)),
-        child: Row(
-          children: [
-            const Icon(Icons.search, size: 20.0, color: Colors.grey),
-            Container(
-              margin: const EdgeInsets.only(left: 5),
-              child: const Text(
-                'Buscar',
-                style: TextStyle(color: Colors.grey, fontSize: 17.0),
+      GestureDetector(
+        onTap: () => Navigator.pushNamed(context, 'search'),
+        child: Container(
+          width: 270,
+          padding: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.only(left: 16.0),
+          decoration: BoxDecoration(
+              border:
+                  Border.all(color: const Color.fromRGBO(234, 236, 239, 1.0)),
+              borderRadius: BorderRadius.circular(20.0)),
+          child: Row(
+            children: [
+              const Icon(Icons.search, size: 20.0, color: Colors.grey),
+              Container(
+                margin: const EdgeInsets.only(left: 5),
+                child: const Text(
+                  'Buscar',
+                  style: TextStyle(color: Colors.grey, fontSize: 17.0),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       Container(
@@ -159,8 +166,7 @@ Widget _tarjeta(BuildContext context) {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        backgroundColor:
-                            Theme.of(context).colorScheme.secondary,
+                        backgroundColor: orange,
                       ),
                       child: const Text('Delivery',
                           style: TextStyle(fontSize: 11.0))),
@@ -179,7 +185,7 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
     children: [
       Container(
         alignment: Alignment.centerLeft,
-        child: headerText(textHeader, Colors.black, FontWeight.bold, 25.0),
+        child: headerText(texto: textHeader, fontSize: 25.0),
       ),
       const Spacer(),
       GestureDetector(
@@ -222,8 +228,10 @@ Widget _populares(BuildContext context, String foto) {
                 children: [
                   Container(
                       margin: const EdgeInsets.symmetric(vertical: 7.0),
-                      child: headerText("Ceviche de Pescado", Colors.black,
-                          FontWeight.bold, 17.0)),
+                      child: headerText(
+                          texto: "Ceviche de Pescado",
+                          color: Colors.black,
+                          fontSize: 17.0)),
                   Container(
                     alignment: Alignment.centerLeft,
                     margin: const EdgeInsets.only(bottom: 5.0),

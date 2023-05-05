@@ -1,4 +1,6 @@
+import 'package:app_restaurant/src/colors/colors.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/alert_dialog.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
 import 'package:app_restaurant/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:app_restaurant/src/features/presentation/tabs/favourite_tab/View/favourite.dart';
 import 'package:app_restaurant/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
@@ -49,7 +51,7 @@ class _TabsPageState extends State<TabsPage> {
   Widget _bottomNavigationBar(BuildContext context) {
     return BottomNavigationBar(
         iconSize: 30,
-        selectedItemColor: Theme.of(context).colorScheme.secondary,
+        selectedItemColor: orange,
         unselectedItemColor: Colors.grey,
         currentIndex: _selectItemIndex,
         onTap: _cambiarWidget,
@@ -69,33 +71,12 @@ class _TabsPageState extends State<TabsPage> {
         const AssetImage('assets/img/location.png'),
         'Habilita tu Ubicación',
         "Permita usar su ubicación para mostrar el restaurante cercano en el mapa",
-        _doneButton(context, "habilitar ubicación"));
+        //_doneButton(context, "habilitar ubicación"));
+        roundedButton(
+          context: context,
+          labelButton: 'habilitar ubicación',
+          color: orange,
+          funcx: () => debugPrint("habilitar geolocalización"),
+        ));
   }
-}
-
-Widget _doneButton(BuildContext context, String labelButton) {
-  return Container(
-    width: 200,
-    height: 65,
-    padding: const EdgeInsets.only(top: 20),
-    child: ElevatedButton(
-      onPressed: () {
-        // ignore: avoid_print
-        print("habilitar geolocalización");
-      },
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.secondary,
-      ),
-      child: Text(
-        labelButton,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-        ),
-      ),
-    ),
-  );
 }
