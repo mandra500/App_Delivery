@@ -1,5 +1,6 @@
 import 'package:app_restaurant/src/colors/colors.dart';
 import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/populares_card.dart';
 import 'package:flutter/material.dart';
 
 class ExploreTab extends StatelessWidget {
@@ -27,12 +28,36 @@ class ExploreTab extends StatelessWidget {
                   ),
                   _sliderCards(),
                   _headers(context, 'Platillos top', "Mostrar todo"),
-                  _populares(context,
-                      'https://lh3.googleusercontent.com/fife/APg5EOZN3plOfmtIxdD3Q2XFX99aCg8WDJ-ccgMUW8cU9t2MVrZAl_1cti-w6iA3JHC1zfHcl2rN2ddK05Gy79qhNhMFvACE64TMDfAobMAfZ18gA3a1b5773jPa7KJgSmT7IJE9hTACMP-NoghXJW9IDYwF4sP6crsk2rXbBM8lk3oAMSpvDnoZeKkd53DL85oGP_dRVfzEAZMUZKEUQ-21C0yWslXkAxXmxVmmkxOBjKeZ7xTTT1MlrGLQh9OUZCn8V9T7lb2W9G-bEWOuUzxRA2pBvv8kaI_GTEJDLid1tkuwPb_CFYOyDz1jxfSlqiomI1RacfmOoFnjeOWAr87N4VwNeFTIZHBsIjP0G5FOOrJf0Wn4iVBEqC_A_QUbWda4JLHNYhcWRREda93pGF0ZIzOjuJnMAPg3a5k2rdkuoGWNmJez4Jfs99Q-dxfeIMCyB8bx6IY7ZbLGReg-IYvPwSUGOAm2OSKE-fS7hIQGtgLs5vqus4KOK1dzsWgaMLP5XCOhlFt0dzLWHyybmUYLIhTdeS9tLUKFAUUJccE6cZjqdd8iiWwdTteDOePn_wLqM259jXY7-Nzwv94eJvZAlnJPb0puRSzogcZIr1OqVUhPAWqSqDnuuc1HFvzD4PM-3vgls7l0Zv17paevPA6Plt8s_Q9NIziJzkZdPKnvXsNz1sRbPHxrJQ_x2Axis5VC0m-fH47kDF4q_kxFkK-ZlGfrhrkg0cEyTFutxNCFo7rIMQOLXUWbnmC1nSKYVLT5yXBeOYyHfmRywAEiq_UYNHAHFzz_0Eq03wX1AQGZvri6ZmueZvkRCDO6J7HeWiHxLlwBE43yn_HUJr8r0WPa1WuPCEwfw80Qg2FWkcH5Wdl7k4OIBmCAthJ3oNCoJgmbmN3TF_oMfWZha4-i4PT27d9DnGmwDUmT44fwaj9M69Jnh4YyKsh2ABrczjkaJXXxJ8hK28GADnHp1YjRiwOAol4o8qusyDpXD8hD4Lh6znSdOqJNo2N1AlHq-rJu6iHkZj7gMQgPqzQc85ACN706EmPnzrzttCwVc_D190Fvm9aHQJgI1L_EBrfVIWHjnjGAXQbOXZJ1o5bNcHeqQu-P2QRFqoFG7X3Jwab1ijja3PHByFahKGVBpxo25p_rYJ8W7tTVVZV-jHkyncF5k4CIAq-y7GSoCC4MC185PODasjJSeAajVbkSg2tkhZwPUceVQdY3ibGj6M-FVdPsLrQanT90sc5JUQChFKb5_aO4GS3TEYeeS8DUt5xqOBGoGeeW6TDXo3onD6VcMnEMsgQjeJN4sGR9LlO7UmvlDOkuXhcVqB47jOkzSCOsxXWBCohwb9j37qKPCIVCzghykbFsyQFxq_l4zHIn12dUMDspnPIGs4eRo6uIkL8W0MqZ4PTmZbf6tkPSaxs3Id7jUbd0CUGbm9Nj5CPLppst0YEgLYjBiwcbiISbljHZVGGG8ONzXII-bXtaNx_e8lWfLomMgWDolvh9VKO5VBUBaVg67TKynlewGpodL808FZsqxF2TwvcbMEjiTdFDiSnvJquL6_nQce_rU-AN989WM7A50074onPhwNlr8zD7LeSI-3A=w1261-h649'),
-                  _populares(context,
-                      'https://lh3.googleusercontent.com/fife/APg5EOZCvH8DRyiIOKugJyW9SA9yig94mvGq0oj1TFZomHTNsdAhn-eT31iZs1-g4C_EoUGPOAwrHkmc8eUvOBd5bEghNFxqts5quwNdLptQ_xpHuu-KGcY1Rt4um-h9LzGBWCKhk5c3e_6Z-xhDF68yrOb-7VkjYj_GCviaNEPkduCZd5uWoBVFQ8Owj-k03lZNKkPRlNAwN55gc8NtL5KuuZONTH7PijgJC1biMKqEJRViPHLbgLLOqAucdi88NdiQSDJya7ojcpm7cwI-K3VMeCzr_tabi5pa6pP7GgF4yA5WXJxb12ClbHSCga3J-yYLLGZuadmbs-0AQm8Bb537wVjlO9AoBb_ETP2b9XDrfZy3H5qR178UcybaC0mtL3w7K7yn9B1Ji_4HroaxfJ8bGsza3CYNwaCs2t5tp6Hq9bBwCyWOWDyU_pxP23MvrBJeggYllD8AAYJMrXp3KSvFNU9NXLzglgIYQhaQluDu1ltYQMS4lZDpXvWYErOR0VknCij5K_TRSkDfoVhfXgxm-jYrhp-bXYty59GZXUq6MBBwLrW0-rxT7NRPHYr7oJGc3N_Zhhkm-akg9frvCtk7MGkbovCGr54gsSBOZimDZSClgpS5nOTjGBbiHPsUy77udcGUYZCRPe8-9ea9ax77n0t3rTjGB120p2v-9uz97PfJsbeO3zI9R7lTJFIXUii3dv6J79z6Z1pgJL7mLYlKz9StFGgk37T4sv0fMsSg2H3LuFEc-QKqYlDUmHQGlkTybYeaLPQNl8zbWKm-qxD0Dg6tSqhsTg9yMBAlZrogn4VVjh9Pi31u_Q9-PE-jJjCcGbpQyEhHoe7JRBdlXJrrDw6ejT0JYR3SJ6nAMncsAj1zPzIdlouSFIjCGq_xYtVRFFYpfub5TMuL_j_qR5KNS2UZRgAH-dzbzj6KH2ehovlxaujL_d7IWcTZBwkIPqkWhnsouskn-XmDhYZgnee1_EDR61tB5nHdE9zROL5cp0fzSIfWHj-rsHpjsifhiRiqN8EfbMknTZHe5gxCcgNlfD7vsg-eMPWNnZTx4gx1U4D_Dt5ym0xYDn7wX9fmw4UiYM_Q1TCCMzXuk_5Em66DV43WgPUHrPDe9rcVVKspRELUewMGPq7ms9k8HRLKSYB9fQF8E22YLacO5y7OhL5e9PVypDxUQazk97iQqKHqPQlrE-mxlcB9uXr3XzESjPDYxjZkSttXBgljbL4ODul8wrUd7p50ygH-t11gED0E1OkrBUGezwxMtRThC5n8u8FnwymDbOop3IuKFdfZx7clnF89i1l1am4RrQeH5_f5oTo9LJhxh55zU7KYp0WcMdwYsEzsHUHL1v4fosBceBasR8cE0ctaezP27t1-Jw7EHyEmdvUyCydZ4tQGBlqmJgk8stsNtIGZEC5EuB4SpqcUjUmD1wWibuHJOsJ0xsVEfaxe_BouklL0gyCaVyUYc-NWRsx-rtBo5kTG16VQGeThyL7xvqEhrKJ_o6wnNvs7-wc1Nkgz8OdbnO1v1Ar3JeU5lQ_0MBD-y2UYo0SfmT2tOQUarOZAEGtd_FjdFT0RKFwnhdyWYLhC55oQdaIhKnQ=w1261-h649'),
-                  _populares(context,
-                      'https://lh3.googleusercontent.com/fife/APg5EOaOb7mEvUUWj5A6Jqt8FoK8eGM0NPewbYVDoz3qmXkF4rEo8dDX-FpnSrU-wndUS3aZTUYMlIM1X2efDWvuD7lWjckbvBCyrnnyG6FXr8qdrRCmpe5VxluypwLqArsOqeBqP93V_JRTb_SWilN9Uuj53jHHCU9U5c4o2rkUR9h1dERwdk3snQjSl-u-KV3ezrVzopmHDx4lzc52XRnAUcUuTkif85cQ8zcKCQdLJmCB8paYj-ABaroAWIi0JN0_RjUNx8bQJXoD4IMXvhPfEZSxff9gAIWm0xVODWHDgaCtUnXmyE6g1tkHASbhRJhFK56xUBAYbr2b5M8jGvlCmzBCnpVxx0jEXaCwMf35GjVlqwJUq_hCKpE5L9sB_zCzk0BY9wvboriDpB4NFX_ARt3_95w0GIDsWZVpICT5rUMeGoW-6UozIRDU1qnbD6rYSQiEhxSTvBKRIuZ71vTc79wEyq4monaTknRP7TJSkgv65285OPbZznl49SBy_oIZs-p9RsDQToe4oA1wuyKbcc_oRN2oi2aTvViVM7eaHvQGL4llHDDuc7qQaEToIGePM-ar6LBN2-nUjz9GLX1elXqcl_E0f454busZ4RTphMfzAil2ox9LDSHjvEbFLZQFhTZ8RPpZ5bKWwIENeqOdBrv9mjCgK-uzToEG4s7G7yYaWd5cVzvvTVbjVvUrdacbgUbFk4punSUgkFeojb5nPhXJkpYLEiMf10nwlHehzxPpGe-sys6Tn2hXlzLsf04srhH67bzryMrdscHFm7fil54MswHO6WGxzStnIB9j2p1YCU-eSzN7zpSl_D2RX6-_MPaT-NDP5tg9vKoYxm9xJiptr4qXJxwx-z-QNbQHRn5_7Jj0Xx29lOnYjjOovDRKvRMrMkqA7VvPAAUvRLsPz91NtvtnCh5x67rbzPt0UuQ6wkpEqgZKxj8aHupmyywGBe31BHdL504MzyPUJrZLRm4PEYL7msn4IJMbQJ0e_uNDHl1Wo5h_AFdnWEWV_iypRWNbI_nrVJ4GRpa2L2a5gnP6C1r3JgTW8hIflMsHZemO8bE1QohNfwuiMJrQJojh0tM1vAsZaPew9J0EqdJZ-I39vvE8mpZd2p1RvFT6RDuI96X-Prr_o6m1UXsLXtZT-J1Xfd6uL37atsvRHnHoGnBz1dgHz37sGyBoFit3Q85--wrwp-9yAcUfRh1uDpULlUMrOA66mxzL_62IiQnQTubpU2a3BlwbThLBqdHsLfNJ1fND9PZzERhtoHJsGoqR6KgCSNJci1nXS7Y0bPwEXK5PyT2t_wvCRprGZqiOwhBK9oSkGyxs4pIUyTQRmsjivdwBOYgARiXr6DuXVkbYZ5W-pzn4SBm4Z0caVno1BuELEVEec3BI6dnVGHMlhn9u1NcwZSGjmxWfGG4fbdcN1ixNuzuTVLEaB8hSE7qwSupm3x1VjVjbvX5hy3m-LUTpgqxXsnHZGrbELw-aRoY9yiKUrvm6iJpNlhBpkVQIUBSPKp0w98uFSLDr2pCMhvGvQnfT42CTvnBib86Alf7KYIdJnc5fh32r1jKSZ1e7Psqojyk-GsNCsW9I3wzVTfw=w1261-h649'),
+                  popularesCard(
+                      context: context,
+                      image: const NetworkImage(
+                          'https://lh3.googleusercontent.com/fife/APg5EOZN3plOfmtIxdD3Q2XFX99aCg8WDJ-ccgMUW8cU9t2MVrZAl_1cti-w6iA3JHC1zfHcl2rN2ddK05Gy79qhNhMFvACE64TMDfAobMAfZ18gA3a1b5773jPa7KJgSmT7IJE9hTACMP-NoghXJW9IDYwF4sP6crsk2rXbBM8lk3oAMSpvDnoZeKkd53DL85oGP_dRVfzEAZMUZKEUQ-21C0yWslXkAxXmxVmmkxOBjKeZ7xTTT1MlrGLQh9OUZCn8V9T7lb2W9G-bEWOuUzxRA2pBvv8kaI_GTEJDLid1tkuwPb_CFYOyDz1jxfSlqiomI1RacfmOoFnjeOWAr87N4VwNeFTIZHBsIjP0G5FOOrJf0Wn4iVBEqC_A_QUbWda4JLHNYhcWRREda93pGF0ZIzOjuJnMAPg3a5k2rdkuoGWNmJez4Jfs99Q-dxfeIMCyB8bx6IY7ZbLGReg-IYvPwSUGOAm2OSKE-fS7hIQGtgLs5vqus4KOK1dzsWgaMLP5XCOhlFt0dzLWHyybmUYLIhTdeS9tLUKFAUUJccE6cZjqdd8iiWwdTteDOePn_wLqM259jXY7-Nzwv94eJvZAlnJPb0puRSzogcZIr1OqVUhPAWqSqDnuuc1HFvzD4PM-3vgls7l0Zv17paevPA6Plt8s_Q9NIziJzkZdPKnvXsNz1sRbPHxrJQ_x2Axis5VC0m-fH47kDF4q_kxFkK-ZlGfrhrkg0cEyTFutxNCFo7rIMQOLXUWbnmC1nSKYVLT5yXBeOYyHfmRywAEiq_UYNHAHFzz_0Eq03wX1AQGZvri6ZmueZvkRCDO6J7HeWiHxLlwBE43yn_HUJr8r0WPa1WuPCEwfw80Qg2FWkcH5Wdl7k4OIBmCAthJ3oNCoJgmbmN3TF_oMfWZha4-i4PT27d9DnGmwDUmT44fwaj9M69Jnh4YyKsh2ABrczjkaJXXxJ8hK28GADnHp1YjRiwOAol4o8qusyDpXD8hD4Lh6znSdOqJNo2N1AlHq-rJu6iHkZj7gMQgPqzQc85ACN706EmPnzrzttCwVc_D190Fvm9aHQJgI1L_EBrfVIWHjnjGAXQbOXZJ1o5bNcHeqQu-P2QRFqoFG7X3Jwab1ijja3PHByFahKGVBpxo25p_rYJ8W7tTVVZV-jHkyncF5k4CIAq-y7GSoCC4MC185PODasjJSeAajVbkSg2tkhZwPUceVQdY3ibGj6M-FVdPsLrQanT90sc5JUQChFKb5_aO4GS3TEYeeS8DUt5xqOBGoGeeW6TDXo3onD6VcMnEMsgQjeJN4sGR9LlO7UmvlDOkuXhcVqB47jOkzSCOsxXWBCohwb9j37qKPCIVCzghykbFsyQFxq_l4zHIn12dUMDspnPIGs4eRo6uIkL8W0MqZ4PTmZbf6tkPSaxs3Id7jUbd0CUGbm9Nj5CPLppst0YEgLYjBiwcbiISbljHZVGGG8ONzXII-bXtaNx_e8lWfLomMgWDolvh9VKO5VBUBaVg67TKynlewGpodL808FZsqxF2TwvcbMEjiTdFDiSnvJquL6_nQce_rU-AN989WM7A50074onPhwNlr8zD7LeSI-3A=w1261-h649'),
+                      title: 'Ceviche de Pescado',
+                      subtitle: 'a base de pescado',
+                      review: '4.8',
+                      ratings: "(233 votos)",
+                      buttonText: 'Delivery',
+                      hasActionButton: true),
+                  popularesCard(
+                      context: context,
+                      image: const NetworkImage(
+                          'https://lh3.googleusercontent.com/fife/APg5EOaOb7mEvUUWj5A6Jqt8FoK8eGM0NPewbYVDoz3qmXkF4rEo8dDX-FpnSrU-wndUS3aZTUYMlIM1X2efDWvuD7lWjckbvBCyrnnyG6FXr8qdrRCmpe5VxluypwLqArsOqeBqP93V_JRTb_SWilN9Uuj53jHHCU9U5c4o2rkUR9h1dERwdk3snQjSl-u-KV3ezrVzopmHDx4lzc52XRnAUcUuTkif85cQ8zcKCQdLJmCB8paYj-ABaroAWIi0JN0_RjUNx8bQJXoD4IMXvhPfEZSxff9gAIWm0xVODWHDgaCtUnXmyE6g1tkHASbhRJhFK56xUBAYbr2b5M8jGvlCmzBCnpVxx0jEXaCwMf35GjVlqwJUq_hCKpE5L9sB_zCzk0BY9wvboriDpB4NFX_ARt3_95w0GIDsWZVpICT5rUMeGoW-6UozIRDU1qnbD6rYSQiEhxSTvBKRIuZ71vTc79wEyq4monaTknRP7TJSkgv65285OPbZznl49SBy_oIZs-p9RsDQToe4oA1wuyKbcc_oRN2oi2aTvViVM7eaHvQGL4llHDDuc7qQaEToIGePM-ar6LBN2-nUjz9GLX1elXqcl_E0f454busZ4RTphMfzAil2ox9LDSHjvEbFLZQFhTZ8RPpZ5bKWwIENeqOdBrv9mjCgK-uzToEG4s7G7yYaWd5cVzvvTVbjVvUrdacbgUbFk4punSUgkFeojb5nPhXJkpYLEiMf10nwlHehzxPpGe-sys6Tn2hXlzLsf04srhH67bzryMrdscHFm7fil54MswHO6WGxzStnIB9j2p1YCU-eSzN7zpSl_D2RX6-_MPaT-NDP5tg9vKoYxm9xJiptr4qXJxwx-z-QNbQHRn5_7Jj0Xx29lOnYjjOovDRKvRMrMkqA7VvPAAUvRLsPz91NtvtnCh5x67rbzPt0UuQ6wkpEqgZKxj8aHupmyywGBe31BHdL504MzyPUJrZLRm4PEYL7msn4IJMbQJ0e_uNDHl1Wo5h_AFdnWEWV_iypRWNbI_nrVJ4GRpa2L2a5gnP6C1r3JgTW8hIflMsHZemO8bE1QohNfwuiMJrQJojh0tM1vAsZaPew9J0EqdJZ-I39vvE8mpZd2p1RvFT6RDuI96X-Prr_o6m1UXsLXtZT-J1Xfd6uL37atsvRHnHoGnBz1dgHz37sGyBoFit3Q85--wrwp-9yAcUfRh1uDpULlUMrOA66mxzL_62IiQnQTubpU2a3BlwbThLBqdHsLfNJ1fND9PZzERhtoHJsGoqR6KgCSNJci1nXS7Y0bPwEXK5PyT2t_wvCRprGZqiOwhBK9oSkGyxs4pIUyTQRmsjivdwBOYgARiXr6DuXVkbYZ5W-pzn4SBm4Z0caVno1BuELEVEec3BI6dnVGHMlhn9u1NcwZSGjmxWfGG4fbdcN1ixNuzuTVLEaB8hSE7qwSupm3x1VjVjbvX5hy3m-LUTpgqxXsnHZGrbELw-aRoY9yiKUrvm6iJpNlhBpkVQIUBSPKp0w98uFSLDr2pCMhvGvQnfT42CTvnBib86Alf7KYIdJnc5fh32r1jKSZ1e7Psqojyk-GsNCsW9I3wzVTfw=w1261-h649'),
+                      title: 'Ceviche Mixto',
+                      subtitle: 'a base de pescado y mariscos',
+                      review: '4.8',
+                      ratings: "(233 votos)",
+                      buttonText: 'Delivery',
+                      hasActionButton: true),
+                  popularesCard(
+                      context: context,
+                      image: const NetworkImage(
+                          'https://lh3.googleusercontent.com/fife/APg5EOZCvH8DRyiIOKugJyW9SA9yig94mvGq0oj1TFZomHTNsdAhn-eT31iZs1-g4C_EoUGPOAwrHkmc8eUvOBd5bEghNFxqts5quwNdLptQ_xpHuu-KGcY1Rt4um-h9LzGBWCKhk5c3e_6Z-xhDF68yrOb-7VkjYj_GCviaNEPkduCZd5uWoBVFQ8Owj-k03lZNKkPRlNAwN55gc8NtL5KuuZONTH7PijgJC1biMKqEJRViPHLbgLLOqAucdi88NdiQSDJya7ojcpm7cwI-K3VMeCzr_tabi5pa6pP7GgF4yA5WXJxb12ClbHSCga3J-yYLLGZuadmbs-0AQm8Bb537wVjlO9AoBb_ETP2b9XDrfZy3H5qR178UcybaC0mtL3w7K7yn9B1Ji_4HroaxfJ8bGsza3CYNwaCs2t5tp6Hq9bBwCyWOWDyU_pxP23MvrBJeggYllD8AAYJMrXp3KSvFNU9NXLzglgIYQhaQluDu1ltYQMS4lZDpXvWYErOR0VknCij5K_TRSkDfoVhfXgxm-jYrhp-bXYty59GZXUq6MBBwLrW0-rxT7NRPHYr7oJGc3N_Zhhkm-akg9frvCtk7MGkbovCGr54gsSBOZimDZSClgpS5nOTjGBbiHPsUy77udcGUYZCRPe8-9ea9ax77n0t3rTjGB120p2v-9uz97PfJsbeO3zI9R7lTJFIXUii3dv6J79z6Z1pgJL7mLYlKz9StFGgk37T4sv0fMsSg2H3LuFEc-QKqYlDUmHQGlkTybYeaLPQNl8zbWKm-qxD0Dg6tSqhsTg9yMBAlZrogn4VVjh9Pi31u_Q9-PE-jJjCcGbpQyEhHoe7JRBdlXJrrDw6ejT0JYR3SJ6nAMncsAj1zPzIdlouSFIjCGq_xYtVRFFYpfub5TMuL_j_qR5KNS2UZRgAH-dzbzj6KH2ehovlxaujL_d7IWcTZBwkIPqkWhnsouskn-XmDhYZgnee1_EDR61tB5nHdE9zROL5cp0fzSIfWHj-rsHpjsifhiRiqN8EfbMknTZHe5gxCcgNlfD7vsg-eMPWNnZTx4gx1U4D_Dt5ym0xYDn7wX9fmw4UiYM_Q1TCCMzXuk_5Em66DV43WgPUHrPDe9rcVVKspRELUewMGPq7ms9k8HRLKSYB9fQF8E22YLacO5y7OhL5e9PVypDxUQazk97iQqKHqPQlrE-mxlcB9uXr3XzESjPDYxjZkSttXBgljbL4ODul8wrUd7p50ygH-t11gED0E1OkrBUGezwxMtRThC5n8u8FnwymDbOop3IuKFdfZx7clnF89i1l1am4RrQeH5_f5oTo9LJhxh55zU7KYp0WcMdwYsEzsHUHL1v4fosBceBasR8cE0ctaezP27t1-Jw7EHyEmdvUyCydZ4tQGBlqmJgk8stsNtIGZEC5EuB4SpqcUjUmD1wWibuHJOsJ0xsVEfaxe_BouklL0gyCaVyUYc-NWRsx-rtBo5kTG16VQGeThyL7xvqEhrKJ_o6wnNvs7-wc1Nkgz8OdbnO1v1Ar3JeU5lQ_0MBD-y2UYo0SfmT2tOQUarOZAEGtd_FjdFT0RKFwnhdyWYLhC55oQdaIhKnQ=w1261-h649'),
+                      title: 'Leche de Tigre',
+                      subtitle: 'a base de pescado y pota',
+                      review: '4.8',
+                      ratings: "(233 votos)",
+                      buttonText: 'Delivery',
+                      hasActionButton: true),
                   const SizedBox(
                     height: 10.0,
                   ),
@@ -200,89 +225,6 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
           ],
         ),
       ),
-    ],
-  );
-}
-
-Widget _populares(BuildContext context, String foto) {
-  return Column(
-    children: [
-      Container(
-        margin: const EdgeInsets.only(left: 10),
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: Row(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image(
-                  width: 80,
-                  height: 80,
-                  fit: BoxFit.cover,
-                  image: NetworkImage(foto)),
-            ),
-            Container(
-              padding: const EdgeInsets.only(left: 20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                      margin: const EdgeInsets.symmetric(vertical: 7.0),
-                      child: headerText(
-                          texto: "Ceviche de Pescado",
-                          color: Colors.black,
-                          fontSize: 17.0)),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    margin: const EdgeInsets.only(bottom: 5.0),
-                    child: const Text(
-                      "Base de pescado",
-                      style: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 13.0),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      const Icon(Icons.star, color: Colors.yellow, size: 16),
-                      const Text("4.8",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 13.0)),
-                      Container(
-                        margin: const EdgeInsets.only(left: 5.0),
-                        child: const Text("(233 votos)",
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 13.0)),
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(left: 30),
-                        width: 80.0,
-                        height: 18.0,
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              backgroundColor:
-                                  Theme.of(context).colorScheme.secondary,
-                            ),
-                            child: const Text('Delivery',
-                                style: TextStyle(fontSize: 11.0))),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
-      )
     ],
   );
 }

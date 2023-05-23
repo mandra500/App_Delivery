@@ -42,7 +42,12 @@ class SearchPage extends StatelessWidget {
                         textHeader: 'Busqueda reciente',
                         textAction: 'Eliminar todo',
                         func: () {}),
-                    _sliderRecentSearch()
+                    _sliderRecentSearch(),
+                    const SizedBox(height: 20.0),
+                    headerDoubleText(
+                        textHeader: 'Recomendado para ti',
+                        textAction: '',
+                        func: () {})
                   ],
                 ),
               )
