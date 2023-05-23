@@ -8,20 +8,18 @@ Widget headerDoubleText(
     {required String textHeader,
     required String textAction,
     required Function()? func}) {
-  return Container(
-    child: Row(
-      children: [
-        headerText(texto: textHeader, fontSize: 20.0),
-        const Spacer(),
-        GestureDetector(
-          onTap: func,
-          child: headerText(
-              texto: textAction,
-              color: orange,
-              fontWeight: FontWeight.w500,
-              fontSize: 15.0),
-        ),
-      ],
-    ),
+  return Row(
+    children: [
+      headerText(texto: textHeader, fontSize: 20.0),
+      const Spacer(),
+      GestureDetector(
+        onTap: func,
+        child: headerText(
+            texto: textAction,
+            color: orange,
+            fontWeight: FontWeight.w500,
+            fontSize: 15.0),
+      ),
+    ],
   );
 }

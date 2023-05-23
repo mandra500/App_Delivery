@@ -4,6 +4,8 @@ import 'package:app_restaurant/src/features/presentation/commons_widgets/header_
 import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
 import 'package:flutter/material.dart';
 
+import '../../commons_widgets/populares_card.dart';
+
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
 
@@ -47,7 +49,35 @@ class SearchPage extends StatelessWidget {
                     headerDoubleText(
                         textHeader: 'Recomendado para ti',
                         textAction: '',
-                        func: () {})
+                        func: () {}),
+                        const SizedBox(height: 20.0),
+                    popularesCard(
+                      context: context,
+                      image: const NetworkImage(
+                          'https://lh3.googleusercontent.com/fife/APg5EOZN3plOfmtIxdD3Q2XFX99aCg8WDJ-ccgMUW8cU9t2MVrZAl_1cti-w6iA3JHC1zfHcl2rN2ddK05Gy79qhNhMFvACE64TMDfAobMAfZ18gA3a1b5773jPa7KJgSmT7IJE9hTACMP-NoghXJW9IDYwF4sP6crsk2rXbBM8lk3oAMSpvDnoZeKkd53DL85oGP_dRVfzEAZMUZKEUQ-21C0yWslXkAxXmxVmmkxOBjKeZ7xTTT1MlrGLQh9OUZCn8V9T7lb2W9G-bEWOuUzxRA2pBvv8kaI_GTEJDLid1tkuwPb_CFYOyDz1jxfSlqiomI1RacfmOoFnjeOWAr87N4VwNeFTIZHBsIjP0G5FOOrJf0Wn4iVBEqC_A_QUbWda4JLHNYhcWRREda93pGF0ZIzOjuJnMAPg3a5k2rdkuoGWNmJez4Jfs99Q-dxfeIMCyB8bx6IY7ZbLGReg-IYvPwSUGOAm2OSKE-fS7hIQGtgLs5vqus4KOK1dzsWgaMLP5XCOhlFt0dzLWHyybmUYLIhTdeS9tLUKFAUUJccE6cZjqdd8iiWwdTteDOePn_wLqM259jXY7-Nzwv94eJvZAlnJPb0puRSzogcZIr1OqVUhPAWqSqDnuuc1HFvzD4PM-3vgls7l0Zv17paevPA6Plt8s_Q9NIziJzkZdPKnvXsNz1sRbPHxrJQ_x2Axis5VC0m-fH47kDF4q_kxFkK-ZlGfrhrkg0cEyTFutxNCFo7rIMQOLXUWbnmC1nSKYVLT5yXBeOYyHfmRywAEiq_UYNHAHFzz_0Eq03wX1AQGZvri6ZmueZvkRCDO6J7HeWiHxLlwBE43yn_HUJr8r0WPa1WuPCEwfw80Qg2FWkcH5Wdl7k4OIBmCAthJ3oNCoJgmbmN3TF_oMfWZha4-i4PT27d9DnGmwDUmT44fwaj9M69Jnh4YyKsh2ABrczjkaJXXxJ8hK28GADnHp1YjRiwOAol4o8qusyDpXD8hD4Lh6znSdOqJNo2N1AlHq-rJu6iHkZj7gMQgPqzQc85ACN706EmPnzrzttCwVc_D190Fvm9aHQJgI1L_EBrfVIWHjnjGAXQbOXZJ1o5bNcHeqQu-P2QRFqoFG7X3Jwab1ijja3PHByFahKGVBpxo25p_rYJ8W7tTVVZV-jHkyncF5k4CIAq-y7GSoCC4MC185PODasjJSeAajVbkSg2tkhZwPUceVQdY3ibGj6M-FVdPsLrQanT90sc5JUQChFKb5_aO4GS3TEYeeS8DUt5xqOBGoGeeW6TDXo3onD6VcMnEMsgQjeJN4sGR9LlO7UmvlDOkuXhcVqB47jOkzSCOsxXWBCohwb9j37qKPCIVCzghykbFsyQFxq_l4zHIn12dUMDspnPIGs4eRo6uIkL8W0MqZ4PTmZbf6tkPSaxs3Id7jUbd0CUGbm9Nj5CPLppst0YEgLYjBiwcbiISbljHZVGGG8ONzXII-bXtaNx_e8lWfLomMgWDolvh9VKO5VBUBaVg67TKynlewGpodL808FZsqxF2TwvcbMEjiTdFDiSnvJquL6_nQce_rU-AN989WM7A50074onPhwNlr8zD7LeSI-3A=w1261-h649'),
+                      title: 'Ceviche de Pescado',
+                      subtitle: 'a base de pescado',
+                      review: '4.8',
+                      ratings: "(233 votos)",
+                      hasActionButton: false),
+                      popularesCard(
+                      context: context,
+                      image: const NetworkImage(
+                          'https://lh3.googleusercontent.com/fife/APg5EOZN3plOfmtIxdD3Q2XFX99aCg8WDJ-ccgMUW8cU9t2MVrZAl_1cti-w6iA3JHC1zfHcl2rN2ddK05Gy79qhNhMFvACE64TMDfAobMAfZ18gA3a1b5773jPa7KJgSmT7IJE9hTACMP-NoghXJW9IDYwF4sP6crsk2rXbBM8lk3oAMSpvDnoZeKkd53DL85oGP_dRVfzEAZMUZKEUQ-21C0yWslXkAxXmxVmmkxOBjKeZ7xTTT1MlrGLQh9OUZCn8V9T7lb2W9G-bEWOuUzxRA2pBvv8kaI_GTEJDLid1tkuwPb_CFYOyDz1jxfSlqiomI1RacfmOoFnjeOWAr87N4VwNeFTIZHBsIjP0G5FOOrJf0Wn4iVBEqC_A_QUbWda4JLHNYhcWRREda93pGF0ZIzOjuJnMAPg3a5k2rdkuoGWNmJez4Jfs99Q-dxfeIMCyB8bx6IY7ZbLGReg-IYvPwSUGOAm2OSKE-fS7hIQGtgLs5vqus4KOK1dzsWgaMLP5XCOhlFt0dzLWHyybmUYLIhTdeS9tLUKFAUUJccE6cZjqdd8iiWwdTteDOePn_wLqM259jXY7-Nzwv94eJvZAlnJPb0puRSzogcZIr1OqVUhPAWqSqDnuuc1HFvzD4PM-3vgls7l0Zv17paevPA6Plt8s_Q9NIziJzkZdPKnvXsNz1sRbPHxrJQ_x2Axis5VC0m-fH47kDF4q_kxFkK-ZlGfrhrkg0cEyTFutxNCFo7rIMQOLXUWbnmC1nSKYVLT5yXBeOYyHfmRywAEiq_UYNHAHFzz_0Eq03wX1AQGZvri6ZmueZvkRCDO6J7HeWiHxLlwBE43yn_HUJr8r0WPa1WuPCEwfw80Qg2FWkcH5Wdl7k4OIBmCAthJ3oNCoJgmbmN3TF_oMfWZha4-i4PT27d9DnGmwDUmT44fwaj9M69Jnh4YyKsh2ABrczjkaJXXxJ8hK28GADnHp1YjRiwOAol4o8qusyDpXD8hD4Lh6znSdOqJNo2N1AlHq-rJu6iHkZj7gMQgPqzQc85ACN706EmPnzrzttCwVc_D190Fvm9aHQJgI1L_EBrfVIWHjnjGAXQbOXZJ1o5bNcHeqQu-P2QRFqoFG7X3Jwab1ijja3PHByFahKGVBpxo25p_rYJ8W7tTVVZV-jHkyncF5k4CIAq-y7GSoCC4MC185PODasjJSeAajVbkSg2tkhZwPUceVQdY3ibGj6M-FVdPsLrQanT90sc5JUQChFKb5_aO4GS3TEYeeS8DUt5xqOBGoGeeW6TDXo3onD6VcMnEMsgQjeJN4sGR9LlO7UmvlDOkuXhcVqB47jOkzSCOsxXWBCohwb9j37qKPCIVCzghykbFsyQFxq_l4zHIn12dUMDspnPIGs4eRo6uIkL8W0MqZ4PTmZbf6tkPSaxs3Id7jUbd0CUGbm9Nj5CPLppst0YEgLYjBiwcbiISbljHZVGGG8ONzXII-bXtaNx_e8lWfLomMgWDolvh9VKO5VBUBaVg67TKynlewGpodL808FZsqxF2TwvcbMEjiTdFDiSnvJquL6_nQce_rU-AN989WM7A50074onPhwNlr8zD7LeSI-3A=w1261-h649'),
+                      title: 'Ceviche de Pescado',
+                      subtitle: 'a base de pescado',
+                      review: '4.8',
+                      ratings: "(233 votos)",
+                      hasActionButton: false),
+                      popularesCard(
+                      context: context,
+                      image: const NetworkImage(
+                          'https://lh3.googleusercontent.com/fife/APg5EOZN3plOfmtIxdD3Q2XFX99aCg8WDJ-ccgMUW8cU9t2MVrZAl_1cti-w6iA3JHC1zfHcl2rN2ddK05Gy79qhNhMFvACE64TMDfAobMAfZ18gA3a1b5773jPa7KJgSmT7IJE9hTACMP-NoghXJW9IDYwF4sP6crsk2rXbBM8lk3oAMSpvDnoZeKkd53DL85oGP_dRVfzEAZMUZKEUQ-21C0yWslXkAxXmxVmmkxOBjKeZ7xTTT1MlrGLQh9OUZCn8V9T7lb2W9G-bEWOuUzxRA2pBvv8kaI_GTEJDLid1tkuwPb_CFYOyDz1jxfSlqiomI1RacfmOoFnjeOWAr87N4VwNeFTIZHBsIjP0G5FOOrJf0Wn4iVBEqC_A_QUbWda4JLHNYhcWRREda93pGF0ZIzOjuJnMAPg3a5k2rdkuoGWNmJez4Jfs99Q-dxfeIMCyB8bx6IY7ZbLGReg-IYvPwSUGOAm2OSKE-fS7hIQGtgLs5vqus4KOK1dzsWgaMLP5XCOhlFt0dzLWHyybmUYLIhTdeS9tLUKFAUUJccE6cZjqdd8iiWwdTteDOePn_wLqM259jXY7-Nzwv94eJvZAlnJPb0puRSzogcZIr1OqVUhPAWqSqDnuuc1HFvzD4PM-3vgls7l0Zv17paevPA6Plt8s_Q9NIziJzkZdPKnvXsNz1sRbPHxrJQ_x2Axis5VC0m-fH47kDF4q_kxFkK-ZlGfrhrkg0cEyTFutxNCFo7rIMQOLXUWbnmC1nSKYVLT5yXBeOYyHfmRywAEiq_UYNHAHFzz_0Eq03wX1AQGZvri6ZmueZvkRCDO6J7HeWiHxLlwBE43yn_HUJr8r0WPa1WuPCEwfw80Qg2FWkcH5Wdl7k4OIBmCAthJ3oNCoJgmbmN3TF_oMfWZha4-i4PT27d9DnGmwDUmT44fwaj9M69Jnh4YyKsh2ABrczjkaJXXxJ8hK28GADnHp1YjRiwOAol4o8qusyDpXD8hD4Lh6znSdOqJNo2N1AlHq-rJu6iHkZj7gMQgPqzQc85ACN706EmPnzrzttCwVc_D190Fvm9aHQJgI1L_EBrfVIWHjnjGAXQbOXZJ1o5bNcHeqQu-P2QRFqoFG7X3Jwab1ijja3PHByFahKGVBpxo25p_rYJ8W7tTVVZV-jHkyncF5k4CIAq-y7GSoCC4MC185PODasjJSeAajVbkSg2tkhZwPUceVQdY3ibGj6M-FVdPsLrQanT90sc5JUQChFKb5_aO4GS3TEYeeS8DUt5xqOBGoGeeW6TDXo3onD6VcMnEMsgQjeJN4sGR9LlO7UmvlDOkuXhcVqB47jOkzSCOsxXWBCohwb9j37qKPCIVCzghykbFsyQFxq_l4zHIn12dUMDspnPIGs4eRo6uIkL8W0MqZ4PTmZbf6tkPSaxs3Id7jUbd0CUGbm9Nj5CPLppst0YEgLYjBiwcbiISbljHZVGGG8ONzXII-bXtaNx_e8lWfLomMgWDolvh9VKO5VBUBaVg67TKynlewGpodL808FZsqxF2TwvcbMEjiTdFDiSnvJquL6_nQce_rU-AN989WM7A50074onPhwNlr8zD7LeSI-3A=w1261-h649'),
+                      title: 'Ceviche de Pescado',
+                      subtitle: 'a base de pescado',
+                      review: '4.8',
+                      ratings: "(233 votos)",
+                      hasActionButton: false),
                   ],
                 ),
               )

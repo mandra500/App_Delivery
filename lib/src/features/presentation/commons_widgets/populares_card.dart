@@ -7,13 +7,13 @@ Widget popularesCard(
     double marginTop = 0.0,
     double marginRight = 0.0,
     double marginButton = 0.0,
-    double marginLeft = 10.0,
+    double marginLeft = 1.0,
     ImageProvider<Object>? image,
     required String title,
     required String subtitle,
     required String review,
     required String ratings,
-    required String buttonText,
+    String buttonText = '',
     required bool hasActionButton}) {
   return Column(
     children: [
