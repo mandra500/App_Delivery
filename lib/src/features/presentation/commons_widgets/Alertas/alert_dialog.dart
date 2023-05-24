@@ -1,5 +1,6 @@
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Headers/header_text.dart';
 import 'package:flutter/material.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
+
 //Image.asset('assets/img/lock.png','Done' 'En breve recibirá un correo electrónico con un código para configurar una nueva contraseña'
 
 void showAlertDialog(BuildContext context, ImageProvider<Object> imagePath,

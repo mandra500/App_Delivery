@@ -1,6 +1,6 @@
 import 'package:app_restaurant/src/colors/colors.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/alert_dialog.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Alertas/alert_dialog.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Botones/rounded_button.dart';
 import 'package:app_restaurant/src/features/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:app_restaurant/src/features/presentation/tabs/favourite_tab/View/favourite.dart';
 import 'package:app_restaurant/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';

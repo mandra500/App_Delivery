@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:app_restaurant/src/colors/colors.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/rounded_button.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Botones/rounded_button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {

@@ -1,10 +1,11 @@
 import 'package:app_restaurant/src/colors/colors.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/card_vertical.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/header_double.dart';
-import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Cards/card_vertical.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Headers/header_double.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Headers/header_text.dart';
+
 import 'package:flutter/material.dart';
 
-import '../../commons_widgets/populares_card.dart';
+import '../../commons_widgets/Cards/populares_card.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);

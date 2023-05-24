@@ -1,7 +1,8 @@
 //colors
 import 'package:app_restaurant/src/colors/colors.dart';
+import 'package:app_restaurant/src/features/presentation/commons_widgets/Headers/header_text.dart';
 //commons widgets
-import 'package:app_restaurant/src/features/presentation/commons_widgets/header_text.dart';
+
 import 'package:flutter/material.dart';
 
 Widget cardVertical(
