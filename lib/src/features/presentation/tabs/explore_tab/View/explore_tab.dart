@@ -62,7 +62,11 @@ class ExploreTab extends StatelessWidget {
                   const SizedBox(
                     height: 10.0,
                   ),
-                  _headers(context, 'Lo más Pedido', "Mostrar todo"),
+                  GestureDetector(
+                    onTap:() {
+                       Navigator.pushNamed(context,'collections');
+                    }, 
+                    child: _headers(context, 'Lo más Pedido', "Mostrar todo")),
                   _sliderCollections()
                 ],
               ),
